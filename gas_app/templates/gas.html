@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Gas Service{% endblock %}</title>
+</head>
+<body style="background-color:rgb(153, 230, 108);">
+    <header>
+        <h1>Gas Service</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'submit_request' %}">Submit Request</a></li>
+                <li><a href="{% url 'track_status' %}">Track Status</a></li>
+                <li><a href="{% url 'add_support' %}">Add Support</a></li>
+                <li><a href="{% url 'manage_support_reps' %}">Manage Support Reps</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    
+    <footer>
+        <p>&copy; {{ year }} Gas Company</p>
+    </footer>
+</body>
+</html>

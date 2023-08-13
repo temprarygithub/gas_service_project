@@ -1,0 +1,17 @@
+{% extends 'gas.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body style = "color:black" style="background-color:rgb(75, 240, 191);">
+
+{% block content %}
+    <h1>Manage Support Representatives</h1>
+    <ul>
+    {% for rep in support_reps %}
+        <li>{{ rep.name }} ({{ rep.username }})</li>
+    {% endfor %}
+    </ul>
+{% endblock %}
+</body>
+</html>

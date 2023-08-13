@@ -1,0 +1,18 @@
+{% extends 'gas.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body style = "color:black" style="background-color:rgb(75, 238, 167);">
+
+{% block content %}
+    <h1>Submit Service Request</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        Account Number: <input type="text" name="account_number"><br>
+        <input type="submit" value="Submit">
+    </form>
+{% endblock %}
+</body>
+</html>
